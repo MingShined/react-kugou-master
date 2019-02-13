@@ -1,0 +1,217 @@
+@import './assets/css/loaders.min.css';
+
+// 头部
+.ant-layout {
+  background-color: @fff;
+  color: #333;
+}
+
+.ant-layout-header {
+  height: auto;
+  background-color: #d43c33;
+  padding: 0;
+  .logo-wrap {
+    padding: 0 10px;
+    height: 48px;
+    // background-color: #2ca2f9;
+    box-sizing: border-box;
+    .ant-input {
+      height: 30px;
+      background: transparent;
+      border: none;
+      background-color: @fff;
+      border-radius: 20px;
+    }
+    .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+      border-color: none;
+      border-right-width: 0;
+    }
+    .logo {
+      height: 100%;
+      background: url('http://m.kugou.com/v3/static/images/index/logo.png')
+        center 13px no-repeat;
+      background-size: contain;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    margin-top: 9px;
+  }
+  .search {
+    margin-top: 13px;
+    font-size: 30px;
+    line-height: 23.5px;
+    font-weight: bold;
+    color: @fff;
+  }
+}
+
+//主轮播
+@bh: 23vh;
+@bradius: 5px;
+.main-banner {
+  transform: translateY(20px);
+  width: 95%;
+  margin: 0 auto;
+  height: @bh;
+  border-radius: @bradius;
+  .swiper-slide {
+    border-radius: @bradius;
+    height: @bh;
+    .slide-content {
+      height: @bh;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@fff: #fff;
+
+//播放页面
+.play-page {
+  position: relative;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  border-radius: 0;
+  .ant-modal-content {
+    color: @fff;
+    height: 100%;
+    background: url('./assets/images/playPage_bg.png') no-repeat;
+    background-size: auto 100%;
+    background-position: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    // transform: scale(1.5);
+    filter: grayscale(40%);
+    .ant-modal-header {
+      color: @fff;
+      background: none;
+    }
+    .dish {
+      display: flex;
+      margin: 0 auto;
+      width: 300px;
+      height: 300px;
+      background: url('./assets/images/dish2.png') no-repeat;
+      border-radius: 100%;
+      background-size: contain;
+      border: 10px solid #5d2439;
+      align-items: center;
+      justify-content: center;
+      .pic {
+        width: 75%;
+        height: 75%;
+        border-radius: 100%;
+        &.active {
+          animation: picRoll 5s linear infinite;
+        }
+      }
+    }
+  }
+  // 歌词
+  .lyric {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    height: 105px;
+    overflow: hidden;
+    ul {
+      position: relative;
+      padding: 0;
+      margin: 0 auto;
+      li {
+        text-align: center;
+        list-style: none;
+      }
+    }
+  }
+  //操作
+  .opation {
+    position: absolute;
+    height: 50px;
+    bottom: 10px;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    span {
+      margin-top: -5px;
+    }
+    i {
+      font-size: 35px;
+    }
+  }
+}
+
+@keyframes picRoll {
+  from {
+    transform: rotate(0);
+    transform-origin: center center;
+  }
+  to {
+    transform: rotate(360deg);
+    transform-origin: center center;
+  }
+}
+
+.ant-layout-footer {
+  background-color: @fff;
+}
+
+//公共
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.link-active {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: @fff;
+  span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: @fff;
+    box-sizing: border-box;
+    &.active {
+      border-bottom: 5px solid @fff;
+    }
+  }
+}
+
+.ant-input:hover {
+  border: none;
+  border-right-width: 0 !important;
+}
+
+.ant-spin-text {
+  color: @fff;
+}
+
+.rank,.song {
+  // margin-top: 20px;
+  .ant-avatar-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 0;
+    margin-left: 10px;
+  }
+}
+
+.song {
+  .ant-avatar-image {
+    width: 65px;
+    height: 65px;
+  }
+}
