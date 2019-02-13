@@ -9,3 +9,12 @@
 * 排行
 * 歌单
 * 歌手
+
+> 运行项目
+
+```
+git clone https://github.com/MingShined/react-kugou-master.git
+cd react-kugou-master
+yarn install(npm install)
+npm start
+```
