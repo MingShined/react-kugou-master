@@ -5,8 +5,8 @@ import Link from 'umi/link';
 import { connect } from 'dva';
 
 interface Props extends BaseProps {
-  name: string;
-  path: string;
+  name?: string;
+  path?: string;
 }
 @connect(({ app }) => ({
   linkIndex: app.linkIndex

@@ -25,7 +25,7 @@ export default class HeaderLayout extends Component<BaseProps, any> {
         >
           <Col span={6} className="logo" onClick={() => router.push('/')} />
           <Col span={14} onClick={() => router.push('/search')}>
-            <p
+            <div
               style={{
                 textAlign: 'center',
                 height: 50,
@@ -34,7 +34,7 @@ export default class HeaderLayout extends Component<BaseProps, any> {
               }}
             >
               海量音乐、点我搜索
-            </p>
+            </div>
             {/* <Input
               type="text"
               placeholder="给你推荐 男孩"
